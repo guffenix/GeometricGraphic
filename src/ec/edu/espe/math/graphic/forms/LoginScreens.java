@@ -3,7 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ec.edu.espe.math.grafic.forms;
+package ec.edu.espe.math.graphic.forms;
+
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -44,7 +46,7 @@ public class LoginScreens extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(85, 96, 128));
         jPanel2.setPreferredSize(new java.awt.Dimension(200, 350));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ec/edu/espe/math/grafic/images/logoGeometry.png"))); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ec/edu/espe/math/graphic/images/logoGeometry.png"))); // NOI18N
 
         loginButton.setText("Access");
         loginButton.addActionListener(new java.awt.event.ActionListener() {
@@ -79,7 +81,7 @@ public class LoginScreens extends javax.swing.JFrame {
         jSeparator1.setForeground(new java.awt.Color(38, 185, 154));
         jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ec/edu/espe/math/grafic/images/avatarX85.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ec/edu/espe/math/graphic/images/avatarX85.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -104,7 +106,7 @@ public class LoginScreens extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(84, 84, 84)
                         .addComponent(jLabel1)
-                        .addContainerGap(108, Short.MAX_VALUE))))
+                        .addContainerGap(115, Short.MAX_VALUE))))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -139,20 +141,26 @@ public class LoginScreens extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 543, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 550, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 350, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 370, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
-        MainMenu frmMainMenu = new MainMenu();
+        
+        if( "Luis".equals(userTextfield.getText()) && "123".equals(passwordTextfield.getText())){
+            MainMenu frmMainMenu = new MainMenu();
         frmMainMenu.setLocationRelativeTo(null);
         frmMainMenu.setVisible(true);
+        }else{
+            JOptionPane.showMessageDialog(null, "Restricted access.");
+        }
+        
     }//GEN-LAST:event_loginButtonActionPerformed
 
     /**

@@ -1,5 +1,5 @@
-package ec.edu.espe.math.grafic;
-import ec.edu.espe.math.grafic.forms.LoginScreens;
+package ec.edu.espe.math.graphic;
+import ec.edu.espe.math.graphic.forms.LoginScreens;
 
 /**
  *
